@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "profiles": {
+    "litellm:default": {
+      "type": "api_key",
+      "provider": "litellm",
+      "key": ""
+    },
+    "github-copilot:github": {
+      "type": "token",
+      "provider": "github-copilot",
+      "token": ""
+    }
+  }
+}

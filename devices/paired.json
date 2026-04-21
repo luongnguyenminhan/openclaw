@@ -1,0 +1,85 @@
+{
+  "5b79a6040090a5659bb92ec9038bd91fd9787679eb229d41e679e8787c59228b": {
+    "deviceId": "5b79a6040090a5659bb92ec9038bd91fd9787679eb229d41e679e8787c59228b",
+    "publicKey": "313Ah49U2r70ZK1xWnHMdm8JEBEpZchj2mQZT5oYiFI",
+    "platform": "Win32",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.read",
+      "operator.write",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "approvedScopes": [
+      "operator.admin",
+      "operator.read",
+      "operator.write",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "remoteIp": "172.19.0.1",
+    "tokens": {
+      "operator": {
+        "token": "e5zUtZBUOfYMAt1xvtuOeGszhR6Jjf6oRfvLX2aUvlk",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing",
+          "operator.read",
+          "operator.write"
+        ],
+        "createdAtMs": 1776788352378
+      }
+    },
+    "createdAtMs": 1776788352378,
+    "approvedAtMs": 1776788352378
+  },
+  "85939f6c9560f13b381bf811064b4e2457b0cd024be8b4971d79c25292abe6d4": {
+    "deviceId": "85939f6c9560f13b381bf811064b4e2457b0cd024be8b4971d79c25292abe6d4",
+    "publicKey": "CftoRNWVEcRZV31H9yTYIjxgoUbHMIJfXVoLOTc2Slc",
+    "platform": "Win32",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.read",
+      "operator.write",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "approvedScopes": [
+      "operator.admin",
+      "operator.read",
+      "operator.write",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "UtmcddEz_kAZdMjk1d8NxlmfrRpTvm89dYhvsmioz7g",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing",
+          "operator.read",
+          "operator.write"
+        ],
+        "createdAtMs": 1776790072547
+      }
+    },
+    "createdAtMs": 1776790072547,
+    "approvedAtMs": 1776790072547
+  }
+}
