@@ -1,1 +1,23 @@
-# 01_thinking — Map of Contents\n\nCentral index for navigating vault. Add claim-named files as you build knowledge.\n\n## Active Areas\n\n### Projects\n- See `vault/projects/` for ongoing work\n\n### Learnings & Decisions\n- See `vault/learnings/` for distilled insights\n\n### People & Context\n- See `vault/people/` for key relationships\n\n### System & Setup\n- See `vault/system/` for infrastructure notes\n\n---\n\n**Purpose:** This file is your mental model index. Link claim-named files here as you learn important things. Use wiki-link format: `[[filename-slug]]` or `[readable title](../filename.md)`.  \n**When:** Review during nightly dreaming consolidation.  \n**Auto-fed by:** memory-core's integrate phase, auto-capture hook.\n
+# 01_thinking — Map of Contents
+
+Central index for navigating vault. Add claim-named files as you build knowledge.
+
+## Active Areas
+
+### Projects
+- See `vault/projects/` for ongoing work
+
+### Learnings & Decisions
+- See `vault/learnings/` for distilled insights
+
+### People & Context
+- See `vault/people/` for key relationships
+
+### System & Setup
+- See `vault/system/` for infrastructure notes
+
+---
+
+**Purpose:** This file is your mental model index. Link claim-named files here as you learn important things. Use wiki-link format: `[[filename-slug]]` or `[readable title](../filename.md)`.  
+**When:** Review during nightly dreaming consolidation.  
+**Auto-fed by:** memory-core's integrate phase, auto-capture hook.

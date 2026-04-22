@@ -1,4 +1,4 @@
-# OpenClaw Optimization Guide
+F# OpenClaw Optimization Guide
 
 **Make your OpenClaw AI agent faster, smarter, cheaper, and actually safe to run in production.**
 
@@ -1362,34 +1362,34 @@ Your primary search path (`memory/` + `vault/01_thinking/`) should contain only 
 
 Run through this in 30 minutes:
 
-- [ ] MEMORY.md under 3 KB (pointers only)
-- [ ] SOUL.md under 1 KB
-- [ ] AGENTS.md under 2 KB
-- [ ] Total workspace context under 8 KB
+- [x] MEMORY.md under 3 KB (pointers only)
+- [x] SOUL.md under 1 KB
+- [x] AGENTS.md under 2 KB
+- [x] Total workspace context under 8 KB
 - [ ] Context pruning enabled (`mode: "cache-ttl"`)
 - [ ] Cron sessions cleaned up / isolated sessions configured
 - [ ] Ollama installed + embedding model pulled (`qwen3-embedding:0.6b` recommended, see Part 10 for tiers)
-- [ ] vault/ directory structure created
+- [x] vault/ directory structure created
 - [ ] Model strategy chosen (orchestrator + sub-agents + fallbacks)
 - [ ] Faster/cheaper fallback model added
 - [ ] Web search API configured (Tavily recommended, Gemini grounding for free)
-- [ ] Unused plugins disabled
+- [x] Unused plugins disabled
 - [ ] Reasoning mode - high for best quality, low/off for speed
-- [ ] Orchestration rules in AGENTS.md
-- [ ] `memory_search` habit added to SOUL.md
-- [ ] Vault orientation protocol in AGENTS.md
-- [ ] For big tasks: research first, spec second, build third (Part 8)
-- [ ] `.learnings/` directory created with HOT.md, corrections.md, ERRORS.md (Part 12)
-- [ ] Micro-learning loop added to AGENTS.md (Part 12)
-- [ ] Daily learnings promotion cron set up — $0 on Cerebras (Part 12)
-- [ ] Memory Bridge scripts installed — `preflight-context.js` + `memory-query.js` (Part 13)
-- [ ] AGENTS.md updated: run preflight before every Codex spawn (Part 13)
-- [ ] Built-in dreaming enabled in memory-core config (Part 22) — replaces the retired custom autoDream pattern
-- [ ] Config protection: "only ops writes openclaw.json" rule in all agent workspaces
-- [ ] `.gitignore` in `.openclaw/` blocking `openclaw.json`, `auth-profiles.json`, `*.sqlite`
-- [ ] Gateway crash-loop fix: stale PID cleanup in `gateway.cmd` (Part 15)
-- [ ] PreCompletion verification rule in AGENTS.md (Part 5)
-- [ ] Loop detection rule in AGENTS.md (Part 5)
+- [x] Orchestration rules in AGENTS.md
+- [x] `memory_search` habit added to SOUL.md
+- [x] Vault orientation protocol in AGENTS.md
+- [x] For big tasks: research first, spec second, build third (Part 8)
+- [x] `.learnings/` directory created with HOT.md, corrections.md, ERRORS.md (Part 12)
+- [x] Micro-learning loop added to AGENTS.md (Part 12)
+- [x] Daily learnings promotion cron set up — $0 on Cerebras (Part 12)
+- [x] Memory Bridge scripts installed — `preflight-context.js` + `memory-query.js` (Part 13)
+- [x] AGENTS.md updated: run preflight before every Codex spawn (Part 13)
+- [x] Built-in dreaming enabled in memory-core config (Part 22) — replaces the retired custom autoDream pattern
+- [x] Config protection: "only ops writes openclaw.json" rule in all agent workspaces
+- [x] `.gitignore` in `.openclaw/` blocking `openclaw.json`, `auth-profiles.json`, `*.sqlite`
+- [x] Gateway crash-loop fix: stale PID cleanup in `gateway.cmd` (Part 15)
+- [x] PreCompletion verification rule in AGENTS.md (Part 5)
+- [x] Loop detection rule in AGENTS.md (Part 5)
 - [ ] Multi-session projects: `progress.txt` pattern in AGENTS.md (Part 5)
 - [ ] **Auto-capture hook installed** (NOT the built-in session-memory — the custom one from Part 11)
 - [ ] Auto-capture API key set (CEREBRAS_API_KEY or AUTOCAPTURE_API_KEY env var)

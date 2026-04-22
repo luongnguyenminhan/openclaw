@@ -10,6 +10,11 @@
       "type": "token",
       "provider": "github-copilot",
       "token": ""
+    },
+    "google:default": {
+      "type": "api_key",
+      "provider": "google",
+      "key": "AIzaSyDSTYwo_bKo0PIKDSpGXceuc4lsTC2KXbU"
     }
   }
 }

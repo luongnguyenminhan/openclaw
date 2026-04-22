@@ -7,6 +7,16 @@
     "github-copilot:github": {
       "errorCount": 0,
       "lastUsed": 1776791465620
+    },
+    "google:default": {
+      "errorCount": 1,
+      "failureCounts": {
+        "rate_limit": 1
+      },
+      "lastFailureAt": 1776831198374,
+      "cooldownUntil": 1776831228374,
+      "cooldownReason": "rate_limit",
+      "cooldownModel": "gemini-3.1-pro-preview"
     }
   }
 }

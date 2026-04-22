@@ -1,1 +1,15 @@
-# 03_archive — Old Notes\n\nThings you learned but no longer act on. Keep for context, not for reference.\n\n## When to archive\n\n- Project shipped and is in maintenance\n- Decision was reversed (but keep it for historical context)\n- Learning was superseded by better info\n\n---\n\n**Purpose:** Keeps vault lean. Archived items no longer pollute search results.  \n**Retention:** Keep for 1 year, then consider deleting.  \n**Search:** memory_search ignores archive by default (configurable).\n
+# 03_archive — Old Notes
+
+Things you learned but no longer act on. Keep for context, not for reference.
+
+## When to archive
+
+- Project shipped and is in maintenance
+- Decision was reversed (but keep it for historical context)
+- Learning was superseded by better info
+
+---
+
+**Purpose:** Keeps vault lean. Archived items no longer pollute search results.  
+**Retention:** Keep for 1 year, then consider deleting.  
+**Search:** memory_search ignores archive by default (configurable).

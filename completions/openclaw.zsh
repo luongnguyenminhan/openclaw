@@ -1419,7 +1419,7 @@ _openclaw_gateway() {
     "--compact[Alias for \"--ws-log compact\"]" \
     "--raw-stream[Log raw model stream events to jsonl]" \
     "--raw-stream-path[Raw stream jsonl path]" \
-    "1: :_values 'command' 'run[Run the WebSocket Gateway (foreground)]' 'status[Show gateway service status + probe the Gateway]' 'install[Install the Gateway service (launchd/systemd/schtasks)]' 'uninstall[Uninstall the Gateway service (launchd/systemd/schtasks)]' 'start[Start the Gateway service (launchd/systemd/schtasks)]' 'stop[Stop the Gateway service (launchd/systemd/schtasks)]' 'restart[Restart the Gateway service (launchd/systemd/schtasks)]' 'call[Call a Gateway method]' 'usage-cost[Fetch usage cost summary from session logs]' 'health[Fetch Gateway health]' 'probe[Show gateway reachability + discovery + health + status summary (local + remote)]' 'discover[Discover gateways via Bonjour (local + wide-area if configured)]'" \
+    "1: :_values 'command' 'run[Run the WebSocket Gateway (foreground)]' 'status[Show gateway service status + probe connectivity/capability]' 'install[Install the Gateway service (launchd/systemd/schtasks)]' 'uninstall[Uninstall the Gateway service (launchd/systemd/schtasks)]' 'start[Start the Gateway service (launchd/systemd/schtasks)]' 'stop[Stop the Gateway service (launchd/systemd/schtasks)]' 'restart[Restart the Gateway service (launchd/systemd/schtasks)]' 'call[Call a Gateway method]' 'usage-cost[Fetch usage cost summary from session logs]' 'health[Fetch Gateway health]' 'probe[Show gateway reachability, auth capability, and read-probe summary (local + remote)]' 'discover[Discover gateways via Bonjour (local + wide-area if configured)]'" \
     "*::arg:->args"
 
   case $state in
@@ -1489,7 +1489,7 @@ _openclaw_daemon() {
   
   _arguments -C \
      \
-    "1: :_values 'command' 'status[Show service install status + probe the Gateway]' 'install[Install the Gateway service (launchd/systemd/schtasks)]' 'uninstall[Uninstall the Gateway service (launchd/systemd/schtasks)]' 'start[Start the Gateway service (launchd/systemd/schtasks)]' 'stop[Stop the Gateway service (launchd/systemd/schtasks)]' 'restart[Restart the Gateway service (launchd/systemd/schtasks)]'" \
+    "1: :_values 'command' 'status[Show service install status + probe connectivity/capability]' 'install[Install the Gateway service (launchd/systemd/schtasks)]' 'uninstall[Uninstall the Gateway service (launchd/systemd/schtasks)]' 'start[Start the Gateway service (launchd/systemd/schtasks)]' 'stop[Stop the Gateway service (launchd/systemd/schtasks)]' 'restart[Restart the Gateway service (launchd/systemd/schtasks)]'" \
     "*::arg:->args"
 
   case $state in
@@ -3062,10 +3062,10 @@ _openclaw_cron_add() {
     "--model[Model override for agent jobs (provider/model or alias)]" \
     "--timeout-seconds[Timeout seconds for agent jobs]" \
     "--light-context[Use lightweight bootstrap context for agent jobs]" \
-    "--tools[Comma-separated tool allow-list (e.g. exec,read,write)]" \
-    "--announce[Announce summary to a chat (subagent-style)]" \
-    "--deliver[Deprecated (use --announce). Announces a summary to a chat.]" \
-    "--no-deliver[Disable announce delivery and skip main-session summary]" \
+    "--tools[Tool allow-list (e.g. exec,read,write or exec read write)]" \
+    "--announce[Fallback-deliver final text to a chat]" \
+    "--deliver[Deprecated (use --announce). Fallback-delivers final text to a chat.]" \
+    "--no-deliver[Disable runner fallback delivery]" \
     "--channel[Delivery channel (last|<channel-id>)]" \
     "--to[Delivery destination (E.164, Telegram chatId, or Discord channel/user)]" \
     "--account[Channel account id for delivery (multi-account setups)]" \
@@ -3096,6 +3096,15 @@ _openclaw_cron_enable() {
 
 _openclaw_cron_disable() {
   _arguments -C \
+    "--url[Gateway WebSocket URL (defaults to gateway.remote.url when configured)]" \
+    "--token[Gateway token (if required)]" \
+    "--timeout[Timeout in ms]" \
+    "--expect-final[Wait for final response (agent)]"
+}
+
+_openclaw_cron_show() {
+  _arguments -C \
+    "--json[Output JSON]" \
     "--url[Gateway WebSocket URL (defaults to gateway.remote.url when configured)]" \
     "--token[Gateway token (if required)]" \
     "--timeout[Timeout in ms]" \
@@ -3148,11 +3157,11 @@ _openclaw_cron_edit() {
     "--timeout-seconds[Timeout seconds for agent jobs]" \
     "--light-context[Enable lightweight bootstrap context for agent jobs]" \
     "--no-light-context[Disable lightweight bootstrap context for agent jobs]" \
-    "--tools[Comma-separated tool allow-list (e.g. exec,read,write)]" \
+    "--tools[Tool allow-list (e.g. exec,read,write or exec read write)]" \
     "--clear-tools[Remove tool allow-list (use all tools)]" \
-    "--announce[Announce summary to a chat (subagent-style)]" \
-    "--deliver[Deprecated (use --announce). Announces a summary to a chat.]" \
-    "--no-deliver[Disable announce delivery]" \
+    "--announce[Fallback-deliver final text to a chat]" \
+    "--deliver[Deprecated (use --announce). Fallback-delivers final text to a chat.]" \
+    "--no-deliver[Disable runner fallback delivery]" \
     "--channel[Delivery channel (last|<channel-id>)]" \
     "--to[Delivery destination (E.164, Telegram chatId, or Discord channel/user)]" \
     "--account[Channel account id for delivery (multi-account setups)]" \
@@ -3178,7 +3187,7 @@ _openclaw_cron() {
   
   _arguments -C \
      \
-    "1: :_values 'command' 'status[Show cron scheduler status]' 'list[List cron jobs]' 'add[Add a cron job]' 'rm[Remove a cron job]' 'enable[Enable a cron job]' 'disable[Disable a cron job]' 'runs[Show cron run history (JSONL-backed)]' 'run[Run a cron job now (debug)]' 'edit[Edit a cron job (patch fields)]'" \
+    "1: :_values 'command' 'status[Show cron scheduler status]' 'list[List cron jobs]' 'add[Add a cron job]' 'rm[Remove a cron job]' 'enable[Enable a cron job]' 'disable[Disable a cron job]' 'show[Show a cron job]' 'runs[Show cron run history (JSONL-backed)]' 'run[Run a cron job now (debug)]' 'edit[Edit a cron job (patch fields)]'" \
     "*::arg:->args"
 
   case $state in
@@ -3190,6 +3199,7 @@ _openclaw_cron() {
         (rm) _openclaw_cron_rm ;;
         (enable) _openclaw_cron_enable ;;
         (disable) _openclaw_cron_disable ;;
+        (show) _openclaw_cron_show ;;
         (runs) _openclaw_cron_runs ;;
         (run) _openclaw_cron_run ;;
         (edit) _openclaw_cron_edit ;;

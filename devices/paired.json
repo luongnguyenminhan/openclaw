@@ -81,5 +81,75 @@
     },
     "createdAtMs": 1776790072547,
     "approvedAtMs": 1776790072547
+  },
+  "3995ee12a5af10501a2095f59c5e4751eb623afecc51618c3a418ef521fb4da0": {
+    "deviceId": "3995ee12a5af10501a2095f59c5e4751eb623afecc51618c3a418ef521fb4da0",
+    "publicKey": "CxDe15YQiFXmh5cJD87zInbVecdvswyRyYrccjZwYz0",
+    "platform": "linux",
+    "clientId": "cli",
+    "clientMode": "probe",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.read"
+    ],
+    "approvedScopes": [
+      "operator.read"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "AZqWAQNN_P_9erstRTe3cbByq1cinRZ5mmEvp1qSZ24",
+        "role": "operator",
+        "scopes": [
+          "operator.read"
+        ],
+        "createdAtMs": 1776830413567
+      }
+    },
+    "createdAtMs": 1776830413567,
+    "approvedAtMs": 1776830413567
+  },
+  "fea997a2125e027572d7ce9b75b65b733ab5ea0c750d3338e4390b349f921e1c": {
+    "deviceId": "fea997a2125e027572d7ce9b75b65b733ab5ea0c750d3338e4390b349f921e1c",
+    "publicKey": "TT2_EyjA6Ev3QdPKv_SIDvLjE-hhildaso3O2d5pm5k",
+    "platform": "Linux x86_64",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.read",
+      "operator.write",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "approvedScopes": [
+      "operator.admin",
+      "operator.read",
+      "operator.write",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "5Ra7T3s3ygR7O4TV29e33MGDuEZq54LpsdQcYOk4mbc",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing",
+          "operator.read",
+          "operator.write"
+        ],
+        "createdAtMs": 1776830604144
+      }
+    },
+    "createdAtMs": 1776830604144,
+    "approvedAtMs": 1776830604144
   }
 }

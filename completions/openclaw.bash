@@ -170,7 +170,7 @@ _openclaw_completion() {
         return 0
         ;;
       cron)
-        opts="status list add rm enable disable runs run edit "
+        opts="status list add rm enable disable show runs run edit "
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
         return 0
         ;;

@@ -1,0 +1,63 @@
+# OpenClaw Secrets & Generated Files
+# Never commit credentials, config, or local build artifacts
+
+# Auth & Config (NEVER COMMIT)
+openclaw.json
+openclaw.json.bak*
+auth-profiles.json
+auth-state.json
+auth-tokens.json
+.env
+.env.local
+.env.*.local
+
+# Databases & Cache
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.ldb
+
+# Credentials & Sessions
+credentials/
+tokens/
+sessions/
+session-state.json
+.auth/
+
+# Logs
+logs/
+*.log
+
+# Build & Temp
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+tmp/
+temp/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# User workspace (local state)
+workspace/.local/
+workspace/.cache/
+workspace/.tmp/
+
+# Package manager locks (optional — enable if shared across team)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Environment
+venv/
+env/
+__pycache__/
+*.pyc
